@@ -62,10 +62,12 @@
     <Folder Include="Table" />
     <Folder Include="Type" />
     <Folder Include="Storage" />
+    <Folder Include="Procedure" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="App.sql" />
     <Build Include="Function\fnNumbersList.sql" />
     <Build Include="Type\TokenizerInput.sql" />
+    <Build Include="Function\fnTokenizeTableOfStrings.sql" />
   </ItemGroup>
 </Project>
