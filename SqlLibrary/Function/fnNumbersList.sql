@@ -1,4 +1,4 @@
-﻿CREATE FUNCTION [dbo].[fnNumbersList]
+﻿CREATE FUNCTION [App].[fnNumbersList]
 (
 	@MaxNumbers INT = 100
 )
@@ -24,3 +24,6 @@ RETURN
         ORDER BY n
 
 );
+/*
+ SELECT  n FROM App.fnNumbersList(DEFAULT);
+*/
