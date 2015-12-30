@@ -8,7 +8,9 @@ BEGIN
 
 	/*
 
-	"Bearing" relative to North as indicated by a magnetic compass
+	This function does (B)
+
+	Per Wikipedia:
 
 	Per Wikipedia:
 
