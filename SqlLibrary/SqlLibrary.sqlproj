@@ -69,5 +69,14 @@
     <Build Include="Function\fnNumbersList.sql" />
     <Build Include="Type\TokenizerInput.sql" />
     <Build Include="Function\fnTokenizeTableOfStrings.sql" />
+    <Build Include="AppData.sql" />
+    <Build Include="Function\fnGreatCircleDistanceInMeters.sql" />
+    <Build Include="Function\fnTokenReassemblyWithoutExcludedTokens.sql" />
+    <Build Include="Type\TokenizerOutput.sql" />
+    <Build Include="Function\fnCalculateGrowthAsFraction.sql" />
+    <Build Include="Function\fnCalculateProportionalChange.sql" />
+    <Build Include="Function\fnRemoveNonASCII.sql" />
+    <Build Include="Function\fnChangeLocalTimeToUTC.sql" />
+    <Build Include="Function\fnComputeCompassBearing.sql" />
   </ItemGroup>
 </Project>

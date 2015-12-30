@@ -1,10 +1,10 @@
 ﻿CREATE FUNCTION App.fnTokenizeTableOfStrings (@InputStringsToShred App.TokenizerInput  READONLY)
 RETURNS @Tokens  TABLE 
- ( 
+( 
 Tokenizer_sfk INT NOT NULL,
 SourceKey SQL_VARIANT NOT NULL,
 TokenOrdinal INT NOT NULL,
-Token VARCHAR(128) NOT NULL
+Token NVARCHAR(128) NOT NULL
 )
 WITH SCHEMABINDING
 AS
@@ -54,7 +54,7 @@ AS
     END
 ;
 /*
-Example:
+--Example:
 
 DECLARE  @InputStringsToShred App.TokenizerInput ;
 
