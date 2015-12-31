@@ -8,9 +8,7 @@ BEGIN
 
 	/*
 
-	This function does (B)
-
-	Per Wikipedia:
+	This function is interpreted as A
 
 	Per Wikipedia:
 
@@ -28,6 +26,14 @@ BEGIN
 	
 	Bearings can be measured in mils or degrees.
 
+	NOTE:
+	The return value is in Radians.  Convert it to degrees using the DEGREE() function or multiply it by ( 180/PI() ).
+
+	Interested in the difference between radians and degrees:
+	http://www.differencebetween.com/difference-between-radian-and-vs-degree/
+
+	TODO: This would be a useful function to make:
+	https://en.wikipedia.org/wiki/Points_of_the_compass
 
 	*/
 
@@ -100,18 +106,22 @@ END
 --Bearing
 --315 
 
-DECLARE
-   @Roswell geometry = geometry::STGeomFromText('POINT(-84.361549 34.022003)',0),
-   @Marietta geometry = geometry::STGeomFromText('POINT(-84.55 33.9525)',0); 
+--Roswell is roughly ENE of Marietta in terms of cardinal points
 
-BEGIN
-SELECT App.fnComputeBearingBetweenCoordinates(@Marietta.STX, @Marietta.STY, @Roswell.STX, @Roswell.STY ) AS BEARING, 'Unconverted' as Converted
+DECLARE
+   @Roswell geometry = geometry::STGeomFromText('POINT(-84.36 34.02)',0),
+   @Marietta geometry = geometry::STGeomFromText('POINT(-84.55 33.95)',0); 
+
+SELECT App.fnComputeBearingBetweenCoordinates(@Marietta.STX, @Marietta.STY, @Roswell.STX, @Roswell.STY ) AS BEARING, 'Radians' as [Unit]
 UNION ALL
-SELECT DEGREES(App.fnComputeBearingBetweenCoordinates(@Marietta.STX, @Marietta.STY, @Roswell.STX, @Roswell.STY)), 'compass bearing in degrees';
-END
+SELECT DEGREES(App.fnComputeBearingBetweenCoordinates(@Marietta.STX, @Marietta.STY, @Roswell.STX, @Roswell.STY)), 'Degrees';
+
 ----Expected output
---1.21746171251992, Unconverted
---69.7554178461612, compass bearing in degrees
+Bearing, Unit
+--1.21746171251992, Radians
+--69.7554178461612, Degrees
+
+
 */
 
 /**
