@@ -78,5 +78,12 @@
     <Build Include="Function\fnRemoveNonASCII.sql" />
     <Build Include="Function\fnChangeLocalTimeToUTC.sql" />
     <Build Include="Function\fnComputeCompassBearing.sql" />
+    <Build Include="Table\PostalCodeUsaHistoricalMaster.sql" />
+    <Build Include="IndexFileGroup.sql" />
+    <Build Include="SECONDARY.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="ZIPCodeHistoryMaster_idl.sql" />
+    <None Include="ZIPCode History Master extended props.sql" />
   </ItemGroup>
 </Project>
