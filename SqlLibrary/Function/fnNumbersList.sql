@@ -1,7 +1,9 @@
-﻿CREATE FUNCTION [dbo].[fnNumbersList]
+﻿CREATE FUNCTION [App].[fnNumbersList]
 (
 	@MaxNumbers INT = 100
 )
+/* Inline table function to create a short list of numbers */
+
 RETURNS TABLE
 WITH SCHEMABINDING
 AS
@@ -22,3 +24,6 @@ RETURN
         ORDER BY n
 
 );
+/*
+ SELECT  n FROM App.fnNumbersList(DEFAULT);
+*/
