@@ -1,4 +1,4 @@
-﻿CREATE FUNCTION [App].[HistogramInputsOnAMeasureInATable]
+﻿CREATE FUNCTION [App].[PercentileDistOnAMeasureInATable]
 (
 		@SourceTable [App].[StatisticsInput] READONLY,
 		@EqualBinsIndicator BIT = 0

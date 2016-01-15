@@ -89,7 +89,7 @@
     <Build Include="View\vZIPCodeProductionDim.sql" />
     <Build Include="Type\App.StatisticsInput.sql" />
     <Build Include="Function\App.StatisticsOnAMeasureInATable.sql" />
-    <Build Include="Function\App.HistogramInputsOnAMeasureInATable.sql" />
+    <Build Include="Function\App.PercentileDistOnAMeasureInATable.sql" />
     <Build Include="Scripts\ZIP Code master insert 2012 12.sql" />
     <Build Include="Scripts\ZIPCode master table.sql" />
     <Build Include="Scripts\Nearest neighbor ZIP Codes andDegree of  Adjacency.sql" />
