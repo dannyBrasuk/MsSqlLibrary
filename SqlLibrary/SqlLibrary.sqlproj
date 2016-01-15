@@ -63,13 +63,14 @@
     <Folder Include="Type" />
     <Folder Include="Storage" />
     <Folder Include="Procedure" />
+    <Folder Include="Scripts" />
+    <Folder Include="FileGroups" />
+    <Folder Include="View" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="App.sql" />
     <Build Include="Function\fnNumbersList.sql" />
     <Build Include="Type\TokenizerInput.sql" />
     <Build Include="Function\fnTokenizeTableOfStrings.sql" />
-    <Build Include="AppData.sql" />
     <Build Include="Function\fnGreatCircleDistanceInMeters.sql" />
     <Build Include="Function\fnTokenReassemblyWithoutExcludedTokens.sql" />
     <Build Include="Type\TokenizerOutput.sql" />
@@ -79,11 +80,19 @@
     <Build Include="Function\fnChangeLocalTimeToUTC.sql" />
     <Build Include="Function\fnComputeCompassBearing.sql" />
     <Build Include="Table\PostalCodeUsaHistoricalMaster.sql" />
-    <Build Include="IndexFileGroup.sql" />
-    <Build Include="SECONDARY.sql" />
+    <None Include="Scripts\ZIPCode History Master extended props.sql" />
+    <PostDeploy Include="Scripts\ZIPCodeHistoryMaster_idl.sql" />
+    <Build Include="Schema\AppData.sql" />
+    <Build Include="Schema\App.sql" />
+    <Build Include="FileGroups\IndexFileGroup.sql" />
+    <Build Include="FileGroups\SECONDARY.sql" />
+    <Build Include="View\vZIPCodeProductionDim.sql" />
+    <Build Include="Type\App.StatisticsInput.sql" />
+    <Build Include="Function\App.StatisticsOnAMeasureInATable.sql" />
+    <Build Include="Function\App..sql" />
+    <Build Include="Function\App.HistogramInputsOnAMeasureInATable.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="ZIPCodeHistoryMaster_idl.sql" />
-    <None Include="ZIPCode History Master extended props.sql" />
+    <None Include="Scripts\ZIPCodeHistoryMaster_2ndinsert.sql" />
   </ItemGroup>
 </Project>
